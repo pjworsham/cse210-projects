@@ -2,7 +2,7 @@ using System.IO;
 
 public class Journal
 {
-    //a variable of called _entries that stores a list of entries
+    //a variable called _entries that stores a list of entries
     public List<Entry> _entries = new List<Entry>();
 
     //the method that takes newEntry and adds it to _entries
