@@ -23,6 +23,7 @@ public class Activity
         Console.WriteLine();
         Console.Write("How long, in seconds, would you like for your session? ");
         _duration = int.Parse(Console.ReadLine());
+        Console.Clear();
         Console.WriteLine("Get ready...");
         ShowSpinner(3);
        
@@ -35,6 +36,7 @@ public class Activity
         Console.WriteLine("Well done!!");
         Console.WriteLine();
         Console.WriteLine($"You have completed another {_duration} seconds of the {_name}");
+        Console.WriteLine();
     }
 
     public void ShowSpinner(int seconds)
