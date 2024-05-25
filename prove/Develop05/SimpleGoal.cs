@@ -8,16 +8,20 @@ public class SimpleGoal : Goal
     {
         _isComplete = false;
     }
-     public override void RecordEvent()
+     public override int RecordEvent()
     {
-
+        _isComplete = true;
+        return _points;
     }
     public override bool IsComplete()
     {
-        return false;
+        return _isComplete;
     }
     public override string GetStringRepresentation()
     {
         return "";
     }
 }
+
+
+  

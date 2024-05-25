@@ -10,9 +10,9 @@ public class EternalGoal : Goal
 
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
-
+        return _points;
     }
     public override bool IsComplete()
     {
