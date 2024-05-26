@@ -1,0 +1,5 @@
+25
+SimpleGoal:Friendly,Do a nice thing,25,False
+SimpleGoal:jump,jump high,25,True
+EternalGoal:Happy,Be happy ,250
+ChecklistGoal:swim,swim in the ocean,25,200,2,0

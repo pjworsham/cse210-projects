@@ -18,6 +18,12 @@ public abstract class Goal
         _points = points;
 
     }
+
+    public string GetName()
+    {
+        return _shortName;
+    }
+    
     //abstract method does not need a body in parent class because the child class has the implementation. The child class is required to implement abstract methods
     public abstract int RecordEvent();
     
