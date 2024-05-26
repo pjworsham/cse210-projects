@@ -214,7 +214,7 @@ public class GoalManager
                 int bonus = int.Parse(goalParts[3]);
                 int target = int.Parse(goalParts[4]);
                 int amountCompleted = int.Parse(goalParts[5]);
-                ChecklistGoal checklistGoal = new ChecklistGoal(name, description, points, bonus, target);
+                ChecklistGoal checklistGoal = new ChecklistGoal(name, description, points, target, bonus);
                 checklistGoal.SetAmountCompleted(amountCompleted);
                 _goals.Add(checklistGoal);
              }
