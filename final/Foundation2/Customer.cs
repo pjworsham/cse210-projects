@@ -1,4 +1,5 @@
 using System.Net.Sockets;
+using System.Reflection.Metadata.Ecma335;
 
 public class Customer
 {
@@ -10,9 +11,17 @@ public class Customer
         _name = name;
         _address = address;
     }
+    public string GetName()
+    {
+        return _name;
+    }
+    public string GetAddress()
+    {
+        return _address.Display();
+    }
     public bool isUsa()
     {
-        return false;
+        return _address.isUsa();
     }
 }
 

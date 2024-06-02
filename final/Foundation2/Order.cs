@@ -3,23 +3,49 @@ using System.Runtime.CompilerServices;
 
 public class Order
 {
-    private List<Product> _product = [];
-    private string _customer;
+    private List<Product> _product;
+    private Customer _customer;
 
-    public Order(string product, string customer)
+    public Order(List<Product> product, Customer customer)
     {
           _customer = customer;
+          _product = product;
     }
+    // should list the name and product id for each product in order
     public string GetPackingLabel()
     {
-        return "";
-    }
+        string packingLabel = "";
+
+        foreach (Product product in _product)
+        {
+            packingLabel = packingLabel + $"Name: {product.GetName()}, Product ID: {product.GetProductId()}\n";
+        }
+        return packingLabel;
+     }
+    //should list the name and address of the customer
     public string GetShippingLabel()
     {
-        return "";
+        string shippingLabel = "";
+        shippingLabel = $"{_customer.GetName()}\n{_customer.GetAddress()}";
+
+        return shippingLabel;
     }
-    public double CalculatetotalCost()
+    //If shipping in USA $5, if not $35
+    public double CalculateTotalCost()
     {
-        return 0;
+        double totalCost = 0;
+        foreach (Product product in _product)
+        {
+            totalCost += product.GetTotalCost();
+        }
+        if (_customer.isUsa())
+        {
+            totalCost += 5;
+        }
+        else
+        {
+            totalCost += 35;
+        }
+        return totalCost;
     }
 }
